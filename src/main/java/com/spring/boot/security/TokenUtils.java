@@ -13,7 +13,7 @@ import io.jsonwebtoken.security.Keys;
 @Service
 public class TokenUtils {
 	
-	private static final int expireInMs = 60*1000;
+	private static final int expireInMs = 60*1000*1000;
 	
 	private final static Key key = Keys.secretKeyFor(SignatureAlgorithm.HS256);
 	
