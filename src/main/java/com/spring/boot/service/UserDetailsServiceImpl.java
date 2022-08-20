@@ -12,7 +12,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-@Service
+
 public class UserDetailsServiceImpl implements UserDetailsService {
 	
 	@Autowired
@@ -22,7 +22,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		Map<String, String> users = new HashMap<>();
 		users.put("admin", encoder.encode("1234"));
-		
+		users.put("user", encoder.encode("4321"));
 		if(users.containsKey(username)) {
 			return new User(username, users.get(username), new ArrayList<>());
 		}

@@ -11,10 +11,5 @@ public class SpringbootJwtMysqlApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringbootJwtMysqlApplication.class, args);
 	}
-	
-	@Bean
-	BCryptPasswordEncoder passwordEncoder() {
-		return new BCryptPasswordEncoder();
-	}
 
 }
